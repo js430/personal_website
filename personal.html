@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Projects — Jeffrey Shi</title>
+  <meta name="description" content="Personal projects by Jeffrey Shi — Ava, a Discord bot with a statistical restock-forecasting engine, Claude Vision card identification, and more." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="net-canvas"></canvas>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html"><span class="brand-mark"></span>Jeffrey Shi</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="personal.html" class="active">Personal</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="section" style="padding-bottom:0;">
+      <div class="section-header reveal">
+        <span class="tag">03</span>
+        <h2>Personal Projects</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="grid-2 reveal" style="margin-bottom:40px;">
+        <div class="panel">
+          <p style="font-size:15px;">
+            Outside of work, I run <strong style="color:var(--accent); font-weight:600;">Ava</strong> —
+            a Discord bot I built and maintain for a regional Pokémon and
+            collectibles restock community spanning Virginia, Maryland, and DC.
+            It tracks confirmed restocks, unverified "hope" tips, and line
+            lengths in real time, then turns that history into statistical
+            forecasts members actually use to plan store runs.
+          </p>
+          <p style="font-size:15px; margin-top:14px;">
+            It's grown into a small platform: moderation tooling, a raffle
+            system, a reputation leaderboard, onboarding automation, and a
+            live public dashboard — all running on a Postgres backend I
+            designed and operate myself.
+          </p>
+          <div class="hero-actions" style="margin-top:24px;">
+            <a class="btn" href="https://discord.gg/FQAQ3DVdY7" target="_blank" rel="noopener">Join the server</a>
+            <a class="btn secondary" href="https://restock-dashboard-production.up.railway.app/" target="_blank" rel="noopener">View dashboard</a>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="fact-row"><span class="fact-label">Stack</span><span class="val">Python · discord.py · PostgreSQL (asyncpg)</span></div>
+          <div class="fact-row"><span class="fact-label">Hosting</span><span class="val">Railway · CI/CD auto-deploy on push</span></div>
+          <div class="fact-row"><span class="fact-label">Scope</span><span class="val">30 cogs · 25 interactive UI views</span></div>
+          <div class="fact-row"><span class="fact-label">Coverage</span><span class="val">9 sub-regions across VA / MD / DC</span></div>
+          <div class="fact-row"><span class="fact-label">Source</span><span class="val">Closed — proprietary logic</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <p class="reveal" style="font-size:15px; color:var(--text-2); margin-bottom:32px; max-width:640px;">
+        A few pieces I'm most proud of — the rest is community infrastructure
+        (moderation, raffles, reputation, onboarding, calendars) that keeps
+        the server running smoothly.
+      </p>
+
+      <div class="grid-2">
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">AVA · FORECASTING</span>
+            <span class="case-status active">CORE FEATURE</span>
+          </div>
+          <div class="case-body">
+            <h3>Restock Forecasting Engine</h3>
+            <p>
+              Predicts which day of the week a store is most likely to restock,
+              using up to 6 months of community-verified restock history. Four
+              models run side by side:
+            </p>
+            <ul style="font-size:13.5px; color:var(--text-2); margin:14px 0 0 18px; line-height:1.9;">
+              <li><strong style="color:var(--text);">Recency-weighted frequency</strong> — a 3-tier decay model (30/90/180-day windows) scores each day of the week independently, so a store restocking every Tuesday <em>and</em> every Sunday can show both near 100%.</li>
+              <li><strong style="color:var(--text);">Bayesian Beta-Binomial</strong> — wraps each day's estimate in a Beta posterior with a weak prior, pulling sparse data toward a sane baseline and reporting a 95% credible interval instead of a bare percentage.</li>
+              <li><strong style="color:var(--text);">Empirical Bayes regional pooling</strong> — estimates a region-wide base rate for a given day, then uses it as an informed prior so data-poor locations borrow strength from data-rich ones.</li>
+              <li><strong style="color:var(--text);">James–Stein shrinkage</strong> — blends each location's own rate with the regional average, weighted by how much history that location actually has.</li>
+            </ul>
+            <div class="case-meta">
+              <span class="chip">Python</span>
+              <span class="chip">scipy</span>
+              <span class="chip green">Bayesian Inference</span>
+              <span class="chip green">Empirical Bayes</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">AVA · VISION</span>
+            <span class="case-status active">CORE FEATURE</span>
+          </div>
+          <div class="case-body">
+            <h3>AI Trading Card Identifier</h3>
+            <p>
+              Members drop a photo of a card into a channel; Claude Vision reads
+              the game, name, number, set, language, and parallel/variant
+              markings (holo patterns, serial numbers, SP/alt-art/treasure-rare
+              stamps for TCGs; rookie/autograph/relic flags for sports cards)
+              from a single structured-extraction prompt.
+            </p>
+            <p style="margin-top:10px;">
+              The result is cross-referenced against five different sources —
+              pokemontcg.io, Scryfall, YGOProDeck, a One Piece card API, and
+              eBay — to return live pricing, and a follow-up view lets the
+              member log the card straight into their collection by condition.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Claude Vision</span>
+              <span class="chip">Python</span>
+              <span class="chip green">Prompt Engineering</span>
+              <span class="chip green">Multi-API Fusion</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">AVA · ALERTS</span>
+            <span class="case-status active">ACTIVE</span>
+          </div>
+          <div class="case-body">
+            <h3>Deal Watch Alert System</h3>
+            <p>
+              Listens to a channel fed by a third-party price-diff bot, parses
+              product name and price straight out of its embeds (handling
+              plain dollar amounts, USD-in-parens conversions, and bare "USD"
+              suffixes), and matches against mod-configured watch rules —
+              keyword, price ceiling, and optional location filter.
+            </p>
+            <p style="margin-top:10px;">
+              A match pings the right role in the right channel, with
+              per-rule cooldown deduplication so a flaky source feed can't
+              spam the same deal twice.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Python</span>
+              <span class="chip">Regex Parsing</span>
+              <span class="chip green">Event-Driven</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">AVA · GRAPH</span>
+            <span class="case-status archived">MOD TOOL</span>
+          </div>
+          <div class="case-body">
+            <h3>Invite Network Visualizer</h3>
+            <p>
+              Generates a self-contained, interactive HTML graph of who invited
+              whom across the server's history — node color and size scale
+              with invite count, positions are pre-computed with a golden-angle
+              phyllotaxis spiral so the graph renders instantly with physics
+              off, and hover tooltips show join dates and invite counts.
+            </p>
+            <p style="margin-top:10px;">
+              Ships as a single downloadable file — no server, no dependencies,
+              just open it in a browser.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Vis.js</span>
+              <span class="chip">Python</span>
+              <span class="chip green">Graph Visualization</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="status-bar">
+    <span>&copy; 2026 Jeffrey Shi</span>
+    <span class="mono-hint">Press <kbd>/</kbd> for commands</span>
+    <span id="utc-clock"></span>
+  </footer>
+
+  <button class="cmd-fab" id="cmd-fab">/ commands</button>
+  <div class="cmd-palette" id="cmd-palette">
+    <div class="cmd-row">
+      <span class="p">&gt;</span>
+      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
+    </div>
+    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact</div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

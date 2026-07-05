@@ -38,7 +38,7 @@
         const dx = a.x - b.x, dy = a.y - b.y;
         const d = Math.hypot(dx, dy);
         if (d < LINK_DIST) {
-          ctx.strokeStyle = `rgba(0, 230, 138, ${0.09 * (1 - d / LINK_DIST)})`;
+          ctx.strokeStyle = `rgba(96, 165, 250, ${0.08 * (1 - d / LINK_DIST)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -48,7 +48,7 @@
       }
     }
     for (const n of nodes) {
-      ctx.fillStyle = "rgba(0, 230, 138, 0.5)";
+      ctx.fillStyle = "rgba(148, 180, 250, 0.45)";
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
       ctx.fill();
@@ -112,12 +112,6 @@
   els.forEach((el) => io.observe(el));
 })();
 
-/* ---------- Redacted text: click to reveal ---------- */
-document.querySelectorAll(".redacted").forEach((el) => {
-  el.addEventListener("click", () => el.classList.toggle("revealed"));
-  el.title = "click to declassify";
-});
-
 /* ---------- UTC clock in status bar ---------- */
 (function clock() {
   const el = document.getElementById("utc-clock");
@@ -141,6 +135,7 @@ document.querySelectorAll(".redacted").forEach((el) => {
     home: "index.html",
     main: "index.html",
     projects: "projects.html",
+    personal: "personal.html",
     resume: "resume.html",
     dossier: "resume.html",
     contact: "index.html#contact",

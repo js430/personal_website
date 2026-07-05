@@ -8,34 +8,34 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <canvas id="net-canvas"></canvas>
-  <div class="class-banner">Unclassified&nbsp;//&nbsp;Personal Portfolio&nbsp;//&nbsp;Approved for Public Release</div>
 
   <nav class="nav">
-    <a class="nav-brand" href="index.html"><span class="prompt">jshi@sigint:~$</span> ./jeffrey_shi</a>
+    <a class="nav-brand" href="index.html"><span class="brand-mark"></span>Jeffrey Shi</a>
     <div class="nav-links">
-      <a href="index.html"><span class="idx">01.</span>HOME</a>
-      <a href="projects.html"><span class="idx">02.</span>PROJECTS</a>
-      <a href="resume.html" class="active"><span class="idx">03.</span>RESUME</a>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="personal.html">Personal</a>
+      <a href="resume.html" class="active">Resume</a>
     </div>
   </nav>
 
   <main class="container">
 
-    <!-- ============ DOSSIER HEADER ============ -->
+    <!-- ============ RESUME HEADER ============ -->
     <header class="dossier-header reveal">
       <div class="dossier-topstrip">
-        <span>PERSONNEL DOSSIER // JS-430</span>
-        <span>STATUS: <span style="color:var(--green);">ACTIVE</span></span>
+        <span>RESUME &mdash; JS-430</span>
+        <span>STATUS: <span class="ok">ACTIVE</span></span>
       </div>
       <div class="dossier-main">
         <div>
-          <div class="subject-line">SUBJECT PROFILE</div>
-          <h1>JEFFREY SHI</h1>
+          <div class="subject-line">Profile</div>
+          <h1>Jeffrey <span class="grad">Shi</span></h1>
           <div class="role-line">Intelligence / SIGINT Analyst · ETL &amp; Data Engineering Background</div>
         </div>
         <div class="dossier-stats">
@@ -45,17 +45,17 @@
         </div>
       </div>
       <div class="dossier-actions">
-        <a class="btn" id="dl-resume" href="assets/Jeffrey_Shi_Resume.pdf" download>&#8595; DOWNLOAD PDF</a>
-        <button class="btn amber" id="print-resume">&#9113; PRINT / SAVE AS PDF</button>
-        <button class="btn secondary" id="expand-all">&#8862; EXPAND ALL SECTIONS</button>
+        <a class="btn" id="dl-resume" href="assets/Jeffrey_Shi_Resume.pdf" download>Download PDF</a>
+        <button class="btn amber" id="print-resume">Print / Save as PDF</button>
+        <button class="btn secondary" id="expand-all">Expand all</button>
       </div>
     </header>
 
     <!-- ============ TAB NAV ============ -->
     <div class="resume-tabs" id="resume-tabs">
-      <button class="active" data-pane="experience" data-cmd-target="experience">01 // EXPERIENCE</button>
-      <button data-pane="skills" data-cmd-target="skills">02 // SKILLS MATRIX</button>
-      <button data-pane="education" data-cmd-target="education">03 // EDUCATION &amp; CERTS</button>
+      <button class="active" data-pane="experience" data-cmd-target="experience">Experience</button>
+      <button data-pane="skills" data-cmd-target="skills">Skills</button>
+      <button data-pane="education" data-cmd-target="education">Education &amp; Certs</button>
     </div>
 
     <!-- ============ EXPERIENCE ============ -->
@@ -216,28 +216,28 @@
     <section class="resume-pane" id="pane-skills" hidden>
       <div class="grid-2">
         <div class="panel skill-group">
-          <h3>// Languages &amp; Core</h3>
+          <h3>Languages &amp; Core</h3>
           <div class="skill"><div class="skill-label"><span>Python</span><span class="pct">95%</span></div><div class="skill-bar"><div class="fill" data-width="95"></div></div></div>
           <div class="skill"><div class="skill-label"><span>SQL (Oracle &amp; Postgres)</span><span class="pct">90%</span></div><div class="skill-bar"><div class="fill" data-width="90"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Git / GitLab</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Jira / Agile</span><span class="pct">82%</span></div><div class="skill-bar"><div class="fill" data-width="82"></div></div></div>
         </div>
         <div class="panel skill-group">
-          <h3>// Data Engineering</h3>
+          <h3>Data Engineering</h3>
           <div class="skill"><div class="skill-label"><span>ETL Pipeline Design</span><span class="pct">92%</span></div><div class="skill-bar"><div class="fill" data-width="92"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Kafka / Streaming Ingest</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Oracle &amp; Postgres Databases</span><span class="pct">88%</span></div><div class="skill-bar"><div class="fill" data-width="88"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Neo4j / Graph Data</span><span class="pct">78%</span></div><div class="skill-bar"><div class="fill" data-width="78"></div></div></div>
         </div>
         <div class="panel skill-group">
-          <h3>// Cloud &amp; DevOps</h3>
+          <h3>Cloud &amp; DevOps</h3>
           <div class="skill"><div class="skill-label"><span>AWS (Certified Cloud Practitioner)</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Kubernetes / Rancher</span><span class="pct">80%</span></div><div class="skill-bar"><div class="fill" data-width="80"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Docker</span><span class="pct">82%</span></div><div class="skill-bar"><div class="fill" data-width="82"></div></div></div>
           <div class="skill"><div class="skill-label"><span>CI/CD (Jenkins · Concourse · GitLab)</span><span class="pct">80%</span></div><div class="skill-bar"><div class="fill" data-width="80"></div></div></div>
         </div>
         <div class="panel skill-group">
-          <h3>// Analysis &amp; Cyber</h3>
+          <h3>Analysis &amp; Cyber</h3>
           <div class="skill"><div class="skill-label"><span>Intelligence / SIGINT Analysis</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Cyber Assessment Tooling</span><span class="pct">80%</span></div><div class="skill-bar"><div class="fill" data-width="80"></div></div></div>
           <div class="skill"><div class="skill-label"><span>Velociraptor Artifact Development</span><span class="pct">75%</span></div><div class="skill-bar"><div class="fill" data-width="75"></div></div></div>
@@ -275,18 +275,18 @@
   </main>
 
   <footer class="status-bar">
-    <span><span class="ok">●</span> SYSTEM NOMINAL</span>
-    <span>PRESS <span style="color:var(--cyan);">/</span> FOR COMMAND PALETTE</span>
+    <span>&copy; 2026 Jeffrey Shi</span>
+    <span class="mono-hint">Press <kbd>/</kbd> for commands</span>
     <span id="utc-clock"></span>
   </footer>
 
-  <button class="cmd-fab" id="cmd-fab">/ cmd</button>
+  <button class="cmd-fab" id="cmd-fab">/ commands</button>
   <div class="cmd-palette" id="cmd-palette">
     <div class="cmd-row">
       <span class="p">&gt;</span>
-      <input id="cmd-input" type="text" placeholder="type a command… (try: help)" autocomplete="off" spellcheck="false" />
+      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
     </div>
-    <div class="cmd-hint"><span class="k">ENTER</span> execute &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; commands: experience, skills, education, download</div>
+    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; experience, skills, education, download, personal</div>
   </div>
 
   <script src="js/main.js"></script>

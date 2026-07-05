@@ -8,19 +8,19 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <canvas id="net-canvas"></canvas>
-  <div class="class-banner">Unclassified&nbsp;//&nbsp;Personal Portfolio&nbsp;//&nbsp;Approved for Public Release</div>
 
   <nav class="nav">
-    <a class="nav-brand" href="index.html"><span class="prompt">jshi@sigint:~$</span> ./jeffrey_shi</a>
+    <a class="nav-brand" href="index.html"><span class="brand-mark"></span>Jeffrey Shi</a>
     <div class="nav-links">
-      <a href="index.html"><span class="idx">01.</span>HOME</a>
-      <a href="projects.html" class="active"><span class="idx">02.</span>PROJECTS</a>
-      <a href="resume.html"><span class="idx">03.</span>RESUME</a>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="personal.html">Personal</a>
+      <a href="resume.html">Resume</a>
     </div>
   </nav>
 
@@ -28,12 +28,14 @@
 
     <section class="section">
       <div class="section-header reveal">
-        <span class="tag">[02]</span>
-        <h2>CASE FILES</h2>
+        <span class="tag">02</span>
+        <h2>Projects</h2>
         <div class="rule"></div>
       </div>
-      <p class="reveal" style="font-family:var(--mono); font-size:13px; color:var(--text-dim); margin:-16px 0 34px;">
-        // Selected technical work across IC and government programs. Customer systems are internal — no public source.
+      <p class="reveal" style="font-size:15px; color:var(--text-2); margin:-20px 0 36px; max-width:640px;">
+        Selected technical work across IC and government programs. Customer systems
+        are internal, so there's no public source — each card is the shape of the
+        problem and how it was solved.
       </p>
 
       <div class="grid-2">
@@ -155,10 +157,10 @@
           <div class="case-body">
             <h3>This Website</h3>
             <p>
-              The site you're looking at: dependency-free static HTML/CSS/JS with a
-              SIGINT-terminal theme — animated node-network canvas, command palette
-              (press <span style="color:var(--cyan); font-family:var(--mono);">/</span>),
-              and an interactive dossier resume with a print-clean stylesheet.
+              The site you're looking at: dependency-free static HTML/CSS/JS —
+              particle-network canvas, a command palette
+              (press <span style="color:var(--accent); font-family:var(--mono);">/</span>),
+              and an interactive resume with a print-clean stylesheet.
             </p>
             <div class="case-meta">
               <span class="chip">HTML/CSS</span>
@@ -177,18 +179,18 @@
   </main>
 
   <footer class="status-bar">
-    <span><span class="ok">●</span> SYSTEM NOMINAL</span>
-    <span>PRESS <span style="color:var(--cyan);">/</span> FOR COMMAND PALETTE</span>
+    <span>&copy; 2026 Jeffrey Shi</span>
+    <span class="mono-hint">Press <kbd>/</kbd> for commands</span>
     <span id="utc-clock"></span>
   </footer>
 
-  <button class="cmd-fab" id="cmd-fab">/ cmd</button>
+  <button class="cmd-fab" id="cmd-fab">/ commands</button>
   <div class="cmd-palette" id="cmd-palette">
     <div class="cmd-row">
       <span class="p">&gt;</span>
-      <input id="cmd-input" type="text" placeholder="type a command… (try: help)" autocomplete="off" spellcheck="false" />
+      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
     </div>
-    <div class="cmd-hint"><span class="k">ENTER</span> execute &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; commands: home, projects, resume, contact</div>
+    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact, download</div>
   </div>
 
   <script src="js/main.js"></script>
