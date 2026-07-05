@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Jeffrey Shi</title>
+  <meta name="description" content="Interactive resume of Jeffrey Shi — intelligence/SIGINT analyst, data scientist, data engineer." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="net-canvas"></canvas>
+  <div class="class-banner">Unclassified&nbsp;//&nbsp;Personal Portfolio&nbsp;//&nbsp;Approved for Public Release</div>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html"><span class="prompt">jshi@sigint:~$</span> ./jeffrey_shi</a>
+    <div class="nav-links">
+      <a href="index.html"><span class="idx">01.</span>HOME</a>
+      <a href="projects.html"><span class="idx">02.</span>PROJECTS</a>
+      <a href="resume.html" class="active"><span class="idx">03.</span>RESUME</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ============ DOSSIER HEADER ============ -->
+    <header class="dossier-header reveal">
+      <div class="dossier-topstrip">
+        <span>PERSONNEL DOSSIER // JS-430</span>
+        <span>STATUS: <span style="color:var(--green);">ACTIVE</span></span>
+      </div>
+      <div class="dossier-main">
+        <div>
+          <div class="subject-line">SUBJECT PROFILE</div>
+          <h1>JEFFREY SHI</h1>
+          <div class="role-line">Intelligence / SIGINT Analyst · ETL &amp; Data Engineering Background</div>
+        </div>
+        <div class="dossier-stats">
+          <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Years Experience</div></div>
+          <div class="stat"><div class="num" data-count="3">0</div><div class="lbl">IC Programs</div></div>
+          <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">B.A. Degrees</div></div>
+        </div>
+      </div>
+      <div class="dossier-actions">
+        <a class="btn" id="dl-resume" href="assets/Jeffrey_Shi_Resume.pdf" download>&#8595; DOWNLOAD PDF</a>
+        <button class="btn amber" id="print-resume">&#9113; PRINT / SAVE AS PDF</button>
+        <button class="btn secondary" id="expand-all">&#8862; EXPAND ALL SECTIONS</button>
+      </div>
+    </header>
+
+    <!-- ============ TAB NAV ============ -->
+    <div class="resume-tabs" id="resume-tabs">
+      <button class="active" data-pane="experience" data-cmd-target="experience">01 // EXPERIENCE</button>
+      <button data-pane="skills" data-cmd-target="skills">02 // SKILLS MATRIX</button>
+      <button data-pane="education" data-cmd-target="education">03 // EDUCATION &amp; CERTS</button>
+    </div>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="resume-pane" id="pane-experience">
+      <div class="timeline">
+
+        <div class="tl-entry open">
+          <div class="tl-card">
+            <button class="tl-head">
+              <span>
+                <span class="role">ETL / Data Engineer</span>
+                <span class="org" style="display:block;">ManTech — Herndon, VA</span>
+              </span>
+              <span style="display:flex; align-items:center; gap:14px;">
+                <span class="dates">NOV 2024 — PRESENT</span>
+                <span class="caret">&#9656;</span>
+              </span>
+            </button>
+            <div class="tl-body">
+              <div class="tl-body-inner">
+                <ul>
+                  <li>Support a U.S. Government / Intelligence Community cybersecurity group providing a platform for cyber assessments of systems.</li>
+                  <li>Develop and maintain modularized Python ETL pipelines that parse cybersecurity scans and reports; built the Titania Nipper report-parsing module for ingest into the cyber assessment platform.</li>
+                  <li>Develop scripts to clean up inefficiencies in the Postgres database and support customer-facing UI components that depend on it.</li>
+                  <li>Research and develop custom Velociraptor artifacts to extract system information for determining cybersecurity compliance of assets and devices.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">Python</span>
+                  <span class="chip">PostgreSQL</span>
+                  <span class="chip green">Velociraptor</span>
+                  <span class="chip green">Cyber Assessment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-card">
+            <button class="tl-head">
+              <span>
+                <span class="role">ETL / Data Engineer</span>
+                <span class="org" style="display:block;">General Dynamics IT (GDIT) — McLean, VA</span>
+              </span>
+              <span style="display:flex; align-items:center; gap:14px;">
+                <span class="dates">OCT 2023 — NOV 2024</span>
+                <span class="caret">&#9656;</span>
+              </span>
+            </button>
+            <div class="tl-body">
+              <div class="tl-body-inner">
+                <ul>
+                  <li>Supported an Intelligence Community mission group building and maintaining ETL pipelines for a live data feed into Oracle and Postgres databases for downstream customer use.</li>
+                  <li>Built and maintained Python ETL pipelines on an asyncio framework, ingesting data from Kafka topics and transforming it for output into Oracle and Postgres.</li>
+                  <li>Drove the migration from a Pentaho-based ETL framework to a Python- and Kubernetes-centered architecture.</li>
+                  <li>Refactored and improved a custom FastAPI application feeding Neo4j, giving the customer graph visualization of all ETL processes and data flow.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">Python</span>
+                  <span class="chip">Kafka</span>
+                  <span class="chip">Oracle</span>
+                  <span class="chip">Kubernetes</span>
+                  <span class="chip green">Neo4j</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-card">
+            <button class="tl-head">
+              <span>
+                <span class="role">Cloud Developer / Engineer</span>
+                <span class="org" style="display:block;">General Dynamics IT (GDIT) — McLean, VA</span>
+              </span>
+              <span style="display:flex; align-items:center; gap:14px;">
+                <span class="dates">SEP 2022 — OCT 2023</span>
+                <span class="caret">&#9656;</span>
+              </span>
+            </button>
+            <div class="tl-body">
+              <div class="tl-body-inner">
+                <ul>
+                  <li>Maintained the technical and cloud infrastructure for a U.S. Government business and data analytics team: AWS RDS running Oracle, applications on EC2, and S3 secondary storage.</li>
+                  <li>Automated recurring tasks with Python web scraping — Selenium WebDriver collection formatted into pandas dataframes and written into database tables for downstream data scientists.</li>
+                  <li>Ran monthly data-integrity validation across database tables via Python and SQL (cx_Oracle), correcting values flagged by the checks.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">AWS</span>
+                  <span class="chip">Python</span>
+                  <span class="chip">Selenium</span>
+                  <span class="chip">Oracle</span>
+                  <span class="chip">pandas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-card">
+            <button class="tl-head">
+              <span>
+                <span class="role">Frontend Developer / Product Delivery Lead</span>
+                <span class="org" style="display:block;">Accenture LLP — Boston, MA / Remote</span>
+              </span>
+              <span style="display:flex; align-items:center; gap:14px;">
+                <span class="dates">JUL 2021 — SEP 2022</span>
+                <span class="caret">&#9656;</span>
+              </span>
+            </button>
+            <div class="tl-body">
+              <div class="tl-body-inner">
+                <ul>
+                  <li>Frontend development and product delivery leadership for client engagements.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">Frontend</span>
+                  <span class="chip">Product Delivery</span>
+                  <span class="chip">Agile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-card">
+            <button class="tl-head">
+              <span>
+                <span class="role">Software Development Intern</span>
+                <span class="org" style="display:block;">Core One — Sterling, VA</span>
+              </span>
+              <span style="display:flex; align-items:center; gap:14px;">
+                <span class="dates">SUMMER 2020</span>
+                <span class="caret">&#9656;</span>
+              </span>
+            </button>
+            <div class="tl-body">
+              <div class="tl-body-inner">
+                <ul>
+                  <li>Software development internship.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">Software Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <!-- NOTE: proficiency percentages are a visual device — tune to taste -->
+    <section class="resume-pane" id="pane-skills" hidden>
+      <div class="grid-2">
+        <div class="panel skill-group">
+          <h3>// Languages &amp; Core</h3>
+          <div class="skill"><div class="skill-label"><span>Python</span><span class="pct">95%</span></div><div class="skill-bar"><div class="fill" data-width="95"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>SQL (Oracle &amp; Postgres)</span><span class="pct">90%</span></div><div class="skill-bar"><div class="fill" data-width="90"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Git / GitLab</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Jira / Agile</span><span class="pct">82%</span></div><div class="skill-bar"><div class="fill" data-width="82"></div></div></div>
+        </div>
+        <div class="panel skill-group">
+          <h3>// Data Engineering</h3>
+          <div class="skill"><div class="skill-label"><span>ETL Pipeline Design</span><span class="pct">92%</span></div><div class="skill-bar"><div class="fill" data-width="92"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Kafka / Streaming Ingest</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Oracle &amp; Postgres Databases</span><span class="pct">88%</span></div><div class="skill-bar"><div class="fill" data-width="88"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Neo4j / Graph Data</span><span class="pct">78%</span></div><div class="skill-bar"><div class="fill" data-width="78"></div></div></div>
+        </div>
+        <div class="panel skill-group">
+          <h3>// Cloud &amp; DevOps</h3>
+          <div class="skill"><div class="skill-label"><span>AWS (Certified Cloud Practitioner)</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Kubernetes / Rancher</span><span class="pct">80%</span></div><div class="skill-bar"><div class="fill" data-width="80"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Docker</span><span class="pct">82%</span></div><div class="skill-bar"><div class="fill" data-width="82"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>CI/CD (Jenkins · Concourse · GitLab)</span><span class="pct">80%</span></div><div class="skill-bar"><div class="fill" data-width="80"></div></div></div>
+        </div>
+        <div class="panel skill-group">
+          <h3>// Analysis &amp; Cyber</h3>
+          <div class="skill"><div class="skill-label"><span>Intelligence / SIGINT Analysis</span><span class="pct">85%</span></div><div class="skill-bar"><div class="fill" data-width="85"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Cyber Assessment Tooling</span><span class="pct">80%</span></div><div class="skill-bar"><div class="fill" data-width="80"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Velociraptor Artifact Development</span><span class="pct">75%</span></div><div class="skill-bar"><div class="fill" data-width="75"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Web Scraping / Automation</span><span class="pct">84%</span></div><div class="skill-bar"><div class="fill" data-width="84"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="resume-pane" id="pane-education" hidden>
+      <div class="grid-2">
+        <div class="panel edu-card">
+          <div class="degree">B.A. Computer Science &amp; B.A. Statistics</div>
+          <div class="school">University of Virginia — Charlottesville, VA</div>
+          <div class="detail">Aug 2018 – May 2021 · Echols Scholar</div>
+        </div>
+        <div class="panel edu-card">
+          <div class="degree">AWS Certified Cloud Practitioner</div>
+          <div class="school">Amazon Web Services</div>
+          <div class="detail">Cloud fundamentals certification.</div>
+        </div>
+        <div class="panel edu-card">
+          <div class="degree">Chinese — Fluent</div>
+          <div class="school">Language Proficiency</div>
+          <div class="detail">Fluent in Chinese in addition to English.</div>
+        </div>
+        <div class="panel edu-card">
+          <div class="degree">Additional Technologies</div>
+          <div class="school">Working Toolset</div>
+          <div class="detail">Rundeck, Jenkins, Rancher (Kubernetes), Jira, GitLab, Concourse CI/CD, Google Cloud (BigQuery, Kubernetes), Docker, AWS.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="status-bar">
+    <span><span class="ok">●</span> SYSTEM NOMINAL</span>
+    <span>PRESS <span style="color:var(--cyan);">/</span> FOR COMMAND PALETTE</span>
+    <span id="utc-clock"></span>
+  </footer>
+
+  <button class="cmd-fab" id="cmd-fab">/ cmd</button>
+  <div class="cmd-palette" id="cmd-palette">
+    <div class="cmd-row">
+      <span class="p">&gt;</span>
+      <input id="cmd-input" type="text" placeholder="type a command… (try: help)" autocomplete="off" spellcheck="false" />
+    </div>
+    <div class="cmd-hint"><span class="k">ENTER</span> execute &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; commands: experience, skills, education, download</div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/resume.js"></script>
+</body>
+</html>

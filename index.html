@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeffrey Shi — Intelligence / SIGINT Analyst</title>
+  <meta name="description" content="Jeffrey Shi — intelligence/SIGINT analyst with a data science and data engineering background." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="net-canvas"></canvas>
+  <div class="class-banner">Unclassified&nbsp;//&nbsp;Personal Portfolio&nbsp;//&nbsp;Approved for Public Release</div>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html"><span class="prompt">jshi@sigint:~$</span> ./jeffrey_shi</a>
+    <div class="nav-links">
+      <a href="index.html" class="active"><span class="idx">01.</span>HOME</a>
+      <a href="projects.html"><span class="idx">02.</span>PROJECTS</a>
+      <a href="resume.html"><span class="idx">03.</span>RESUME</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-terminal">
+        <div class="term-titlebar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-title">jshi@sigint-workstation: ~/profile</span>
+        </div>
+        <div class="term-body">
+          <div class="term-line"><span class="p">$</span> <span class="cmd">whoami --verbose</span></div>
+          <h1 class="hero-name">JEFFREY <span class="accent">SHI</span></h1>
+          <div class="hero-role"><span id="type-target" data-phrases='["Intelligence Analyst","SIGINT Analyst","ETL / Data Engineer","Cloud Engineer"]'></span><span class="cursor"></span></div>
+          <p class="hero-sub">
+            I find signal in noise. My career started in software and data engineering —
+            building ETL pipelines, cloud infrastructure, and cyber assessment tooling
+            for Intelligence Community programs — and now applies that technical
+            foundation to intelligence and SIGINT analysis. I work where engineering
+            rigor meets tradecraft.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="projects.html">&gt; VIEW PROJECTS</a>
+            <a class="btn amber" href="resume.html">&gt; OPEN DOSSIER</a>
+            <a class="btn secondary" href="#contact">&gt; ESTABLISH CONTACT</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="section-header reveal">
+        <span class="tag">[01]</span>
+        <h2>MISSION BRIEF</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel reveal">
+          <p style="font-size:15px;">
+            I'm an intelligence/SIGINT analyst with an unusual origin story: I spent
+            years as a
+            <strong style="color:var(--green);">data engineer and cloud developer</strong>
+            on U.S. Government and Intelligence Community programs at ManTech and GDIT —
+            building ETL pipelines for live mission data feeds, maintaining AWS
+            infrastructure, and developing cyber assessment tooling.
+          </p>
+          <p style="font-size:15px; margin-top:14px;">
+            That background changes how I approach analysis. Where most analysts see a
+            spreadsheet, I see a <span class="redacted">queryable dataset waiting for a pipeline</span>.
+            I automate the tedious parts of tradecraft so the human effort goes where it
+            matters — judgment, pattern recognition, and analytic conclusions.
+          </p>
+        </div>
+        <div class="panel reveal">
+          <div style="font-family:var(--mono); font-size:12px; color:var(--text-faint); letter-spacing:.12em; margin-bottom:14px;">// OPERATING PARAMETERS</div>
+          <div style="font-family:var(--mono); font-size:13.5px; line-height:2.1;">
+            <div><span style="color:var(--green);">FOCUS.......:</span> Intelligence &amp; SIGINT analysis</div>
+            <div><span style="color:var(--green);">DISCIPLINE..:</span> SIGINT, all-source aware</div>
+            <div><span style="color:var(--green);">FOUNDATION..:</span> ETL / data engineering · cloud (AWS)</div>
+            <div><span style="color:var(--green);">EDUCATION...:</span> UVA — B.A. Computer Science &amp; B.A. Statistics</div>
+            <div><span style="color:var(--green);">LANGUAGES...:</span> Python, SQL (Oracle/Postgres) · Chinese (fluent)</div>
+            <div><span style="color:var(--green);">POSTURE.....:</span> <span style="color:var(--amber);">ACTIVE</span> — open to interesting problems</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAPABILITIES ================= -->
+    <section class="section" id="capabilities">
+      <div class="section-header reveal">
+        <span class="tag">[02]</span>
+        <h2>CAPABILITY DOMAINS</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="grid-3">
+        <div class="domain-card reveal">
+          <div class="icon">[ SIG ]</div>
+          <h3>Intelligence &amp; SIGINT Analysis</h3>
+          <p>SIGINT analysis, pattern-of-life development, network analysis, and
+             producing decision-ready intelligence products under time pressure.</p>
+          <div class="chips">
+            <span class="chip green">SIGINT Analysis</span>
+            <span class="chip green">Network Analysis</span>
+            <span class="chip green">All-Source Fusion</span>
+          </div>
+        </div>
+        <div class="domain-card reveal">
+          <div class="icon">[ ETL ]</div>
+          <h3>Data Engineering</h3>
+          <p>Pipelines that don't fall over: async Python ETL from Kafka topics into
+             Oracle, Postgres, and Neo4j — including migrating legacy stacks to
+             Python + Kubernetes architectures.</p>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Kafka</span>
+            <span class="chip">Oracle / Postgres</span>
+            <span class="chip">Kubernetes</span>
+          </div>
+        </div>
+        <div class="domain-card reveal">
+          <div class="icon">[ OPS ]</div>
+          <h3>Cloud &amp; Cyber Tooling</h3>
+          <p>AWS infrastructure, containerized deployments, CI/CD, and automation —
+             plus cyber assessment tooling like custom Velociraptor artifacts for
+             compliance determination.</p>
+          <div class="chips">
+            <span class="chip amber">AWS</span>
+            <span class="chip amber">Docker / K8s</span>
+            <span class="chip amber">Velociraptor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="section-header reveal">
+        <span class="tag">[03]</span>
+        <h2>ESTABLISH CONTACT</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="panel reveal" style="text-align:center; padding:44px 30px;">
+        <p style="font-family:var(--mono); font-size:14px; color:var(--text-dim); margin-bottom:26px;">
+          // Secure channel not required. Email works fine.
+        </p>
+        <div class="contact-strip">
+          <a class="btn" href="mailto:jeffreyshi430@gmail.com">&gt; EMAIL</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/jeffrey-shi-24570150/" target="_blank" rel="noopener">&gt; LINKEDIN</a>
+          <a class="btn secondary" href="https://github.com/js430" target="_blank" rel="noopener">&gt; GITHUB</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="status-bar">
+    <span><span class="ok">●</span> SYSTEM NOMINAL</span>
+    <span>PRESS <span style="color:var(--cyan);">/</span> FOR COMMAND PALETTE</span>
+    <span id="utc-clock"></span>
+  </footer>
+
+  <!-- Command palette -->
+  <button class="cmd-fab" id="cmd-fab">/ cmd</button>
+  <div class="cmd-palette" id="cmd-palette">
+    <div class="cmd-row">
+      <span class="p">&gt;</span>
+      <input id="cmd-input" type="text" placeholder="type a command… (try: help)" autocomplete="off" spellcheck="false" />
+    </div>
+    <div class="cmd-hint"><span class="k">ENTER</span> execute &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; commands: home, projects, resume, contact</div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

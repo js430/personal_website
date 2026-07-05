@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Jeffrey Shi</title>
+  <meta name="description" content="Selected work by Jeffrey Shi — ETL pipelines, cloud infrastructure, and cyber assessment tooling for IC programs." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="net-canvas"></canvas>
+  <div class="class-banner">Unclassified&nbsp;//&nbsp;Personal Portfolio&nbsp;//&nbsp;Approved for Public Release</div>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html"><span class="prompt">jshi@sigint:~$</span> ./jeffrey_shi</a>
+    <div class="nav-links">
+      <a href="index.html"><span class="idx">01.</span>HOME</a>
+      <a href="projects.html" class="active"><span class="idx">02.</span>PROJECTS</a>
+      <a href="resume.html"><span class="idx">03.</span>RESUME</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="section">
+      <div class="section-header reveal">
+        <span class="tag">[02]</span>
+        <h2>CASE FILES</h2>
+        <div class="rule"></div>
+      </div>
+      <p class="reveal" style="font-family:var(--mono); font-size:13px; color:var(--text-dim); margin:-16px 0 34px;">
+        // Selected technical work across IC and government programs. Customer systems are internal — no public source.
+      </p>
+
+      <div class="grid-2">
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">CASE-2025-001</span>
+            <span class="case-status active">ACTIVE</span>
+          </div>
+          <div class="case-body">
+            <h3>Cyber Report ETL — Titania Nipper Module</h3>
+            <p>
+              At ManTech, supporting an IC cybersecurity group: modularized Python ETL
+              pipelines that parse cybersecurity scans and reports for a cyber assessment
+              platform. Built the Titania Nipper report-parsing module end to end, from
+              raw report to platform-ready ingest.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Python</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip green">ETL</span>
+              <span class="chip green">Cyber Assessment</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">CASE-2025-002</span>
+            <span class="case-status active">ACTIVE</span>
+          </div>
+          <div class="case-body">
+            <h3>Velociraptor Artifact Development</h3>
+            <p>
+              Research and development of custom Velociraptor artifacts that extract
+              relevant system information from assets and devices, feeding automated
+              determinations of cybersecurity compliance across an enterprise.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Velociraptor</span>
+              <span class="chip">VQL</span>
+              <span class="chip green">DFIR</span>
+              <span class="chip green">Compliance</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">CASE-2024-003</span>
+            <span class="case-status archived">DELIVERED</span>
+          </div>
+          <div class="case-body">
+            <h3>Kafka &rarr; Oracle/Postgres ETL Migration</h3>
+            <p>
+              At GDIT, for an IC mission group running a live data feed: Python ETL
+              pipelines on an asyncio framework ingesting from Kafka topics into Oracle
+              and Postgres — part of migrating a legacy Pentaho ETL stack to a
+              Python- and Kubernetes-centered architecture.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Python</span>
+              <span class="chip">asyncio</span>
+              <span class="chip">Kafka</span>
+              <span class="chip">Oracle</span>
+              <span class="chip">Kubernetes</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">CASE-2024-004</span>
+            <span class="case-status archived">DELIVERED</span>
+          </div>
+          <div class="case-body">
+            <h3>ETL Data-Flow Graph Visualization</h3>
+            <p>
+              Refactored and improved a custom FastAPI application feeding Neo4j, giving
+              the customer a live graph visualization of every ETL process and data flow
+              in the system — link analysis, but for pipelines.
+            </p>
+            <div class="case-meta">
+              <span class="chip">FastAPI</span>
+              <span class="chip">Neo4j</span>
+              <span class="chip">Python</span>
+              <span class="chip green">Graph Viz</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">CASE-2023-005</span>
+            <span class="case-status archived">ARCHIVED</span>
+          </div>
+          <div class="case-body">
+            <h3>Automated Web-Scraping Ingest</h3>
+            <p>
+              Automated recurring data collection for a government analytics team:
+              Selenium WebDriver scraping formatted into pandas dataframes and written to
+              an AWS-hosted Oracle database for downstream data scientists, plus monthly
+              scripted data-integrity validation via cx_Oracle.
+            </p>
+            <div class="case-meta">
+              <span class="chip">Selenium</span>
+              <span class="chip">pandas</span>
+              <span class="chip">Oracle</span>
+              <span class="chip">AWS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
+            <span class="case-id">CASE-2026-006</span>
+            <span class="case-status dev">IN DEV</span>
+          </div>
+          <div class="case-body">
+            <h3>This Website</h3>
+            <p>
+              The site you're looking at: dependency-free static HTML/CSS/JS with a
+              SIGINT-terminal theme — animated node-network canvas, command palette
+              (press <span style="color:var(--cyan); font-family:var(--mono);">/</span>),
+              and an interactive dossier resume with a print-clean stylesheet.
+            </p>
+            <div class="case-meta">
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip green">Design</span>
+            </div>
+            <div class="case-links">
+              <a href="https://github.com/js430" target="_blank" rel="noopener">[ github ]</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="status-bar">
+    <span><span class="ok">●</span> SYSTEM NOMINAL</span>
+    <span>PRESS <span style="color:var(--cyan);">/</span> FOR COMMAND PALETTE</span>
+    <span id="utc-clock"></span>
+  </footer>
+
+  <button class="cmd-fab" id="cmd-fab">/ cmd</button>
+  <div class="cmd-palette" id="cmd-palette">
+    <div class="cmd-row">
+      <span class="p">&gt;</span>
+      <input id="cmd-input" type="text" placeholder="type a command… (try: help)" autocomplete="off" spellcheck="false" />
+    </div>
+    <div class="cmd-hint"><span class="k">ENTER</span> execute &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; commands: home, projects, resume, contact</div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
