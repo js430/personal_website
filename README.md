@@ -1,5 +1,7 @@
 # Jeffrey Shi — Personal Website
 
+**Live at https://js430.github.io/personal_website/** (GitHub Pages, `main` branch).
+
 Static personal site with a SIGINT-terminal / declassified-dossier theme.
 No build step, no dependencies — plain HTML/CSS/JS. Host it anywhere
 (GitHub Pages, Netlify, Cloudflare Pages, S3…).
