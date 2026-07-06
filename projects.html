@@ -29,7 +29,7 @@
     <section class="section">
       <div class="section-header reveal">
         <span class="tag">02</span>
-        <h2>Projects</h2>
+        <h2 data-scramble>Projects</h2>
         <div class="rule"></div>
       </div>
       <p class="reveal" style="font-size:15px; color:var(--text-2); margin:-20px 0 36px; max-width:640px;">
@@ -46,7 +46,7 @@
             <span class="case-status active">ACTIVE</span>
           </div>
           <div class="case-body">
-            <h3>Cyber Report ETL — Titania Nipper Module</h3>
+            <h3 data-scramble>Cyber Report ETL — Titania Nipper Module</h3>
             <p>
               At ManTech, supporting an IC cybersecurity group: modularized Python ETL
               pipelines that parse cybersecurity scans and reports for a cyber assessment
@@ -68,7 +68,7 @@
             <span class="case-status active">ACTIVE</span>
           </div>
           <div class="case-body">
-            <h3>Velociraptor Artifact Development</h3>
+            <h3 data-scramble>Velociraptor Artifact Development</h3>
             <p>
               Research and development of custom Velociraptor artifacts that extract
               relevant system information from assets and devices, feeding automated
@@ -89,7 +89,7 @@
             <span class="case-status archived">DELIVERED</span>
           </div>
           <div class="case-body">
-            <h3>Kafka &rarr; Oracle/Postgres ETL Migration</h3>
+            <h3 data-scramble>Kafka &rarr; Oracle/Postgres ETL Migration</h3>
             <p>
               At GDIT, for an IC mission group running a live data feed: Python ETL
               pipelines on an asyncio framework ingesting from Kafka topics into Oracle
@@ -112,7 +112,7 @@
             <span class="case-status archived">DELIVERED</span>
           </div>
           <div class="case-body">
-            <h3>ETL Data-Flow Graph Visualization</h3>
+            <h3 data-scramble>ETL Data-Flow Graph Visualization</h3>
             <p>
               Refactored and improved a custom FastAPI application feeding Neo4j, giving
               the customer a live graph visualization of every ETL process and data flow
@@ -133,7 +133,7 @@
             <span class="case-status archived">ARCHIVED</span>
           </div>
           <div class="case-body">
-            <h3>Automated Web-Scraping Ingest</h3>
+            <h3 data-scramble>Automated Web-Scraping Ingest</h3>
             <p>
               Automated recurring data collection for a government analytics team:
               Selenium WebDriver scraping formatted into pandas dataframes and written to
@@ -155,7 +155,7 @@
             <span class="case-status dev">IN DEV</span>
           </div>
           <div class="case-body">
-            <h3>This Website</h3>
+            <h3 data-scramble>This Website</h3>
             <p>
               The site you're looking at: dependency-free static HTML/CSS/JS —
               particle-network canvas, a command palette
@@ -190,9 +190,10 @@
       <span class="p">&gt;</span>
       <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
     </div>
-    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact, download</div>
+    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact, download, terminal</div>
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/terminal.js"></script>
 </body>
 </html>

@@ -24,6 +24,27 @@
     </div>
   </nav>
 
+  <div class="ops-ticker" aria-hidden="true">
+    <div class="ops-track">
+      <span class="ops-item"><span class="tag ok">[OK]</span> restock pipeline nominal — 0 errors</span>
+      <span class="ops-item"><span class="tag info">[INFO]</span> session handshake verified</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> card-vision inference latency 340ms</span>
+      <span class="ops-item"><span class="tag warn">[SCAN]</span> dependency audit complete — 0 critical</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> geo-index rebuilt — 9 regions</span>
+      <span class="ops-item"><span class="tag info">[INFO]</span> cold cache warmed</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> backup snapshot complete</span>
+      <span class="ops-item"><span class="tag info">[INFO]</span> uptime 42d 06h</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> restock pipeline nominal — 0 errors</span>
+      <span class="ops-item"><span class="tag info">[INFO]</span> session handshake verified</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> card-vision inference latency 340ms</span>
+      <span class="ops-item"><span class="tag warn">[SCAN]</span> dependency audit complete — 0 critical</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> geo-index rebuilt — 9 regions</span>
+      <span class="ops-item"><span class="tag info">[INFO]</span> cold cache warmed</span>
+      <span class="ops-item"><span class="tag ok">[OK]</span> backup snapshot complete</span>
+      <span class="ops-item"><span class="tag info">[INFO]</span> uptime 42d 06h</span>
+    </div>
+  </div>
+
   <main class="container">
 
     <!-- ================= HERO ================= -->
@@ -51,7 +72,7 @@
     <section class="section" id="about">
       <div class="section-header reveal">
         <span class="tag">01</span>
-        <h2>About</h2>
+        <h2 data-scramble>About</h2>
         <div class="rule"></div>
       </div>
       <div class="grid-2">
@@ -86,13 +107,13 @@
     <section class="section" id="capabilities">
       <div class="section-header reveal">
         <span class="tag">02</span>
-        <h2>What I do</h2>
+        <h2 data-scramble>What I do</h2>
         <div class="rule"></div>
       </div>
       <div class="grid-3">
         <div class="domain-card reveal">
           <div class="icon">SIG</div>
-          <h3>Intelligence &amp; SIGINT Analysis</h3>
+          <h3 data-scramble>Intelligence &amp; SIGINT Analysis</h3>
           <p>SIGINT analysis, pattern-of-life development, network analysis, and
              producing decision-ready intelligence products under time pressure.</p>
           <div class="chips">
@@ -103,7 +124,7 @@
         </div>
         <div class="domain-card reveal">
           <div class="icon">ETL</div>
-          <h3>Data Engineering</h3>
+          <h3 data-scramble>Data Engineering</h3>
           <p>Pipelines that don't fall over: async Python ETL from Kafka topics into
              Oracle, Postgres, and Neo4j — including migrating legacy stacks to
              Python + Kubernetes architectures.</p>
@@ -116,7 +137,7 @@
         </div>
         <div class="domain-card reveal">
           <div class="icon">OPS</div>
-          <h3>Cloud &amp; Cyber Tooling</h3>
+          <h3 data-scramble>Cloud &amp; Cyber Tooling</h3>
           <p>AWS infrastructure, containerized deployments, CI/CD, and automation —
              plus cyber assessment tooling like custom Velociraptor artifacts for
              compliance determination.</p>
@@ -133,7 +154,7 @@
     <section class="section" id="contact">
       <div class="section-header reveal">
         <span class="tag">03</span>
-        <h2>Contact</h2>
+        <h2 data-scramble>Contact</h2>
         <div class="rule"></div>
       </div>
       <div class="panel reveal" style="text-align:center; padding:48px 30px;">
@@ -163,9 +184,10 @@
       <span class="p">&gt;</span>
       <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
     </div>
-    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact, download</div>
+    <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact, download, terminal</div>
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/terminal.js"></script>
 </body>
 </html>
