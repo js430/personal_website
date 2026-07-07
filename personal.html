@@ -74,6 +74,36 @@
 
         <article class="case-file reveal">
           <div class="case-header">
+            <span class="case-id">AVA · CALLOUTS</span>
+            <span class="case-status active">CORE FEATURE</span>
+          </div>
+          <div class="case-body">
+            <h3 data-scramble>Real-Time Callout &amp; Tracking System</h3>
+            <p>
+              The heart of the server: four callout types — <code>/restock</code>
+              (confirmed), <code>/hope</code> (unconfirmed tip), <code>/remain</code>
+              (remaining stock check), and <code>/empty</code> — each one pings the
+              right regional role and spins up a dedicated thread with a live,
+              interactive status panel.
+            </p>
+            <ul style="font-size:13.5px; color:var(--text-2); margin:14px 0 0 18px; line-height:1.9;">
+              <li><strong style="color:var(--text);">Crowd-sourced line tracking</strong> — members tap a line-length button (0/10/20/30/40/50+) in the thread; a rolling average of the last 10 reports drives a color-coded indicator (🟢/🟡/🔴) that updates live on both the thread panel and the original channel alert at once, with a 5-minute per-user cooldown against spam.</li>
+              <li><strong style="color:var(--text);">One-tap stock status</strong> — "Still in Stock" / "Cooked" buttons (with an optional note like "No Pokémon" or "Perfect Order only") rename the thread and update both embeds instantly, so status is visible without opening the thread.</li>
+              <li><strong style="color:var(--text);">Direct Google Maps links</strong> — every stored location carries its maps link, so every callout title is clickable straight to directions.</li>
+              <li><strong style="color:var(--text);">Guided location discovery</strong> — filing a callout walks region → store type → specific location, populated live from the database for that exact combination; a separate filterable browser lets mods search every stored location by store type and by region/state.</li>
+              <li><strong style="color:var(--text);">Duplicate &amp; conflict protection</strong> — a 2-hour cooldown blocks re-reporting the same store/location, and an active unconfirmed hope alert blocks a duplicate restock report until it's confirmed instead.</li>
+            </ul>
+            <div class="case-meta">
+              <span class="chip">Python</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip green">Real-Time</span>
+              <span class="chip green">Live Embeds</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file reveal">
+          <div class="case-header">
             <span class="case-id">AVA · FORECASTING</span>
             <span class="case-status active">CORE FEATURE</span>
           </div>
