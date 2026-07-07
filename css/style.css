@@ -176,18 +176,23 @@ body::before {
 .hero-3d {
   position: absolute;
   top: 50%;
-  right: -60px;
+  right: -110px;
   transform: translateY(-50%);
   width: 620px;
   height: 620px;
   z-index: 0;
   pointer-events: none;
+  /* Fade the canvas edges to nothing instead of a hard rectangle — the
+     globe's own render always fills a square, so this is what makes it
+     read as sitting *in* the page rather than framed by a box. */
+  mask-image: radial-gradient(circle at 50% 50%, black 42%, transparent 82%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 42%, transparent 82%);
 }
 
 .hero-3d canvas { width: 100%; height: 100%; display: block; }
 
-@media (max-width: 1400px) { .hero-3d { width: 520px; height: 520px; right: -30px; } }
-@media (max-width: 1100px) { .hero-3d { width: 420px; height: 420px; opacity: 0.6; } }
+@media (max-width: 1400px) { .hero-3d { width: 520px; height: 520px; right: -70px; } }
+@media (max-width: 1100px) { .hero-3d { width: 420px; height: 420px; right: -40px; opacity: 0.55; } }
 @media (max-width: 900px)  { .hero-3d { display: none; } }
 
 .eyebrow {
