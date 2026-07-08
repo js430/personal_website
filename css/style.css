@@ -250,18 +250,21 @@ body::after {
 .hero-name {
   font-family: var(--serif);
   font-size: clamp(46px, 8vw, 88px);
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.02;
   color: var(--text);
 }
 
 .hero-name .grad {
+  color: var(--accent); /* fallback if background-clip:text isn't supported/rendered */
   background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero-name .grad { color: transparent; }
 }
 
 .hero-role {
@@ -619,16 +622,19 @@ body::after {
 .dossier-main h1 {
   font-family: var(--serif);
   font-size: clamp(32px, 5vw, 46px);
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 700;
   letter-spacing: -0.015em;
 }
 
 .dossier-main h1 .grad {
+  color: var(--accent); /* fallback if background-clip:text isn't supported/rendered */
   background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .dossier-main h1 .grad { color: transparent; }
 }
 
 .dossier-main .subject-line {
@@ -657,10 +663,14 @@ body::after {
   font-size: 32px;
   font-weight: 600;
   letter-spacing: -0.01em;
+  color: var(--accent); /* fallback if background-clip:text isn't supported/rendered */
   background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .stat .num { color: transparent; }
 }
 
 .stat .lbl {
