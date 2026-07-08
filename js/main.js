@@ -75,7 +75,7 @@
         const bx = b.x + b.rx, by = b.y + b.ry;
         const d = Math.hypot(ax - bx, ay - by);
         if (d < LINK_DIST) {
-          ctx.strokeStyle = `rgba(96, 165, 250, ${0.08 * (1 - d / LINK_DIST)})`;
+          ctx.strokeStyle = `rgba(136, 192, 208, ${0.08 * (1 - d / LINK_DIST)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(ax, ay);
@@ -86,7 +86,7 @@
     }
 
     for (const n of nodes) {
-      ctx.fillStyle = "rgba(148, 180, 250, 0.45)";
+      ctx.fillStyle = "rgba(180, 210, 220, 0.45)";
       ctx.beginPath();
       ctx.arc(n.x + n.rx, n.y + n.ry, n.r, 0, Math.PI * 2);
       ctx.fill();
@@ -100,11 +100,11 @@
       const px = p.a.x + (p.b.x - p.a.x) * p.t;
       const py = p.a.y + (p.b.y - p.a.y) * p.t;
       const alpha = Math.sin(p.t * Math.PI); // fades in, peaks mid-flight, fades out
-      ctx.fillStyle = `rgba(167, 139, 250, ${0.9 * alpha})`;
+      ctx.fillStyle = `rgba(180, 142, 173, ${0.9 * alpha})`;
       ctx.beginPath();
       ctx.arc(px, py, 2.2, 0, Math.PI * 2);
       ctx.fill();
-      ctx.fillStyle = `rgba(167, 139, 250, ${0.25 * alpha})`;
+      ctx.fillStyle = `rgba(180, 142, 173, ${0.25 * alpha})`;
       ctx.beginPath();
       ctx.arc(px, py, 5, 0, Math.PI * 2);
       ctx.fill();

@@ -31,9 +31,9 @@
     return; // CDN unreachable — fail silently, the 2D background already covers the page
   }
 
-  const ACCENT  = 0x60a5fa; // blue
-  const ACCENT2 = 0xa78bfa; // violet
-  const BG      = 0x08090c;
+  const ACCENT  = 0x88c0d0; // Nord8 frost cyan
+  const ACCENT2 = 0xb48ead; // Nord15 aurora purple
+  const BG      = 0x1c2027;
 
   const R           = 1.6;
   const POINT_COUNT = 20;
@@ -101,17 +101,17 @@
     const ctx = c.getContext("2d");
 
     const base = ctx.createLinearGradient(0, 0, 0, h);
-    base.addColorStop(0, "#03040a");
-    base.addColorStop(0.5, "#060c18");
-    base.addColorStop(1, "#03040a");
+    base.addColorStop(0, "#11141a");
+    base.addColorStop(0.5, "#1b2330");
+    base.addColorStop(1, "#11141a");
     ctx.fillStyle = base;
     ctx.fillRect(0, 0, w, h);
 
     function blob(cx, cy, r, alpha) {
       const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
-      g.addColorStop(0, `rgba(64, 88, 122, ${alpha})`);
-      g.addColorStop(0.7, `rgba(64, 88, 122, ${alpha * 0.5})`);
-      g.addColorStop(1, "rgba(64, 88, 122, 0)");
+      g.addColorStop(0, `rgba(76, 86, 106, ${alpha})`);
+      g.addColorStop(0.7, `rgba(76, 86, 106, ${alpha * 0.5})`);
+      g.addColorStop(1, "rgba(76, 86, 106, 0)");
       ctx.fillStyle = g;
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, Math.PI * 2);
@@ -133,7 +133,7 @@
       }
     }
 
-    ctx.strokeStyle = "rgba(96, 165, 250, 0.14)";
+    ctx.strokeStyle = "rgba(136, 192, 208, 0.14)";
     ctx.lineWidth = 1;
     for (let lat = 0; lat <= h; lat += h / 8) {
       ctx.beginPath(); ctx.moveTo(0, lat); ctx.lineTo(w, lat); ctx.stroke();
