@@ -1,44 +1,48 @@
 # Jeffrey Shi — Personal Website
 
-**Live at https://js430.github.io/personal_website/** (GitHub Pages, `main` branch).
+**Live at https://js430.github.io/personal_website/** (GitHub Pages, `main` branch —
+push to deploy; `.nojekyll` keeps the build a plain file copy).
 
-Static personal site with a SIGINT-terminal / declassified-dossier theme.
-No build step, no dependencies — plain HTML/CSS/JS. Host it anywhere
-(GitHub Pages, Netlify, Cloudflare Pages, S3…).
+Static personal site in the "Nord Ops" design — the [Nord](https://www.nordtheme.com/)
+editor/terminal palette with editorial serif headlines (Newsreader), Public Sans body,
+and JetBrains Mono for data/labels. No build step; the only third-party requests are
+Google Fonts (styles only). Three.js is vendored into `js/vendor/three/` — no CDN
+script execution.
 
 ## Pages
 
 | Page | File | Notes |
 |------|------|-------|
-| Home | `index.html` | Terminal hero, mission brief, capability domains, contact |
-| Projects | `projects.html` | Projects styled as intel "case files" |
-| Resume | `resume.html` | Interactive dossier: tabs, expandable timeline, animated skills matrix |
-
-## Content status
-
-Resume, projects, and home-page content are populated from the Nov 2025 resume;
-`assets/Jeffrey_Shi_Resume.pdf` is the real downloadable resume.
-
-Still to customize:
-
-- **Current role** — the timeline's latest entry is ManTech (per the resume);
-  add the current intelligence/SIGINT analyst position when shareable.
-- **Skill percentages** — the bars in `resume.html` are a visual device;
-  tune `data-width` values to taste.
-- **Website repo link** — the "This Website" case file in `projects.html`
-  points at the GitHub profile; swap in the repo URL once pushed.
+| Home | `index.html` | Hero with 3D signals globe, about, capability domains, contact |
+| Projects | `projects.html` | Professional work as "case files" (IC/government programs) |
+| Personal | `personal.html` | Ava Discord bot — callouts, forecasting, card vision, alerts |
+| Resume | `resume.html` | Interactive resume: tabs, expandable timeline, skills, PDF download |
 
 ## Features
 
-- Animated node-network canvas background (respects `prefers-reduced-motion`)
-- Typing-rotation hero, scroll reveals, click-to-declassify redacted text
-- Command palette: press `/` anywhere, type `help`, `projects`, `resume`,
-  `skills`, `download`, etc.
-- Resume: tabbed sections, expandable timeline entries, animated skill bars,
-  stat count-ups
-- **PRINT / SAVE AS PDF** button uses a clean white print stylesheet, so the
-  browser's print-to-PDF produces a readable paper resume
-- Live UTC clock in the status bar, because of course
+- 3D wireframe "signals globe" hero (Three.js r160, vendored; bloom, atmosphere
+  shader, starfield) — desktop only, skipped for `prefers-reduced-motion`
+- Interactive particle-network background (cursor repulsion, traveling packets)
+- Orchestrated staggered hero load-in; cipher-scramble headings on scroll reveal
+- Command palette: press `/` anywhere (`help`, `projects`, `personal`, `resume`,
+  `download`, `terminal`…)
+- Hidden terminal easter egg: press `` ` `` — canned client-side shell with
+  navigation, resume download, and a few jokes
+- Resume: tabbed sections, expandable timeline, animated skill bars, stat count-ups,
+  and a clean white print stylesheet so print-to-PDF produces a readable paper resume
+- Ambient ops-feed ticker and live UTC clock
+
+## Content status
+
+Populated from the Nov 2025 resume; `assets/Jeffrey_Shi_Resume.pdf` is the real,
+downloadable resume (phone number deliberately scrubbed for the public copy).
+
+Still open:
+
+- **Current role** — the timeline's latest entry is ManTech (per the resume); add
+  the current intelligence/SIGINT analyst position when shareable.
+- **Skill percentages** — the bars in `resume.html` are a visual device; tune
+  `data-width` values to taste.
 
 ## Local preview
 

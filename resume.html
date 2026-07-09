@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <canvas id="net-canvas"></canvas>
+  <canvas id="net-canvas" aria-hidden="true"></canvas>
 
   <nav class="nav">
     <a class="nav-brand" href="index.html"><span class="brand-mark"></span>Jeffrey Shi</a>
@@ -284,7 +284,7 @@
   <div class="cmd-palette" id="cmd-palette">
     <div class="cmd-row">
       <span class="p">&gt;</span>
-      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
+      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" aria-label="Site command" autocomplete="off" spellcheck="false" />
     </div>
     <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; experience, skills, education, download, personal, terminal</div>
   </div>

@@ -307,7 +307,7 @@
     }
     if (cmd === "help") {
       input.value = "";
-      input.placeholder = "commands: home | projects | personal | resume | contact | download";
+      input.placeholder = "commands: home | projects | personal | resume | contact | download | terminal";
       return;
     }
     if (cmd === "download" || cmd === "pdf") {

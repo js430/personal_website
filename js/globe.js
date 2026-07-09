@@ -4,12 +4,12 @@
    animated arcs, a fresnel atmosphere rim glow, a starfield, and real
    bloom post-processing via Three.js's official addons.
 
-   Three.js and its postprocessing addons load from a pinned CDN via
-   an import map declared in index.html — still zero build step, and
-   the only external network dependency on the whole site.
+   Three.js r160 and its postprocessing addons are vendored into
+   js/vendor/three/ and resolved via the import map in index.html —
+   zero build step and zero third-party script execution.
 
    Desktop-only, skipped for prefers-reduced-motion, and fails silently
-   if the CDN is unreachable — the 2D particle canvas (js/main.js) is
+   if the modules can't load — the 2D particle canvas (js/main.js) is
    always the universal fallback, on every page and every device. */
 (async function heroGlobe() {
   const container = document.getElementById("hero-3d");
@@ -28,7 +28,7 @@
     ({ UnrealBloomPass } = await import("three/addons/postprocessing/UnrealBloomPass.js"));
     ({ OutputPass }      = await import("three/addons/postprocessing/OutputPass.js"));
   } catch (e) {
-    return; // CDN unreachable — fail silently, the 2D background already covers the page
+    return; // modules failed to load — fail silently, the 2D background already covers the page
   }
 
   const ACCENT  = 0x88c0d0; // Nord8 frost cyan
@@ -40,7 +40,9 @@
   const ARC_COUNT   = 13;
 
   // ---------- renderer / scene / camera ----------
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  // No alpha: the scene has an opaque background (UnrealBloomPass drops
+  // alpha in its composite anyway, so transparency could never work here).
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.0;

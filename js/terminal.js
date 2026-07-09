@@ -17,7 +17,7 @@
       <div class="term-output" id="term-output"></div>
       <div class="term-input-row">
         <span class="p">&gt;</span>
-        <input id="term-input" type="text" autocomplete="off" spellcheck="false" placeholder="type 'help'" />
+        <input id="term-input" type="text" autocomplete="off" spellcheck="false" placeholder="type 'help'" aria-label="Terminal command" />
       </div>
     </div>
   `;

@@ -8,7 +8,6 @@
 
 :root {
   --bg: #1c2027;
-  --bg-elev: #2e3440;              /* Nord0 */
   --surface: rgba(216, 222, 233, 0.035);
   --surface-hover: rgba(216, 222, 233, 0.065);
   --border: rgba(216, 222, 233, 0.09);
@@ -18,8 +17,6 @@
   --text-3: #6d7891;                /* muted — tertiary / labels */
   --accent: #88c0d0;                /* Nord8 frost cyan — dominant */
   --accent-2: #b48ead;              /* Nord15 aurora purple — sharp secondary */
-  --accent-rgb: 136, 192, 208;
-  --accent-2-rgb: 180, 142, 173;
   --accent-soft: rgba(136, 192, 208, 0.12);
   --grad: linear-gradient(120deg, #8fbcbb, #5e81ac);  /* Nord7 teal → Nord10 deep frost blue */
   --mono: "JetBrains Mono", "Cascadia Code", Consolas, monospace;
@@ -78,8 +75,6 @@ body::after {
   z-index: -1;
   opacity: 0.5;
 }
-
-.mono { font-family: var(--mono); }
 
 /* ---------- Navigation ---------- */
 .nav {

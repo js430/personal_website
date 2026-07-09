@@ -10,17 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Three.js r160 vendored locally (js/vendor/three/) — no third-party
+       script execution, no CDN supply-chain or availability dependency. -->
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      "three": "./js/vendor/three/three.module.min.js",
+      "three/addons/": "./js/vendor/three/addons/"
     }
   }
   </script>
 </head>
 <body>
-  <canvas id="net-canvas"></canvas>
+  <canvas id="net-canvas" aria-hidden="true"></canvas>
 
   <nav class="nav">
     <a class="nav-brand" href="index.html"><span class="brand-mark"></span>Jeffrey Shi</a>
@@ -193,7 +195,7 @@
   <div class="cmd-palette" id="cmd-palette">
     <div class="cmd-row">
       <span class="p">&gt;</span>
-      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" autocomplete="off" spellcheck="false" />
+      <input id="cmd-input" type="text" placeholder="Type a command… (try: help)" aria-label="Site command" autocomplete="off" spellcheck="false" />
     </div>
     <div class="cmd-hint"><span class="k">ENTER</span> run &nbsp;·&nbsp; <span class="k">ESC</span> close &nbsp;·&nbsp; home, projects, personal, resume, contact, download, terminal</div>
   </div>
