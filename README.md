@@ -1,6 +1,6 @@
 # Jeffrey Shi — Personal Website
 
-**Live at https://js430.github.io/personal_website/** (GitHub Pages, `main` branch —
+**Live at https://js430.github.io/** (GitHub Pages user site, `main` branch —
 push to deploy; `.nojekyll` keeps the build a plain file copy).
 
 Static personal site in the "Nord Ops" design — the [Nord](https://www.nordtheme.com/)
